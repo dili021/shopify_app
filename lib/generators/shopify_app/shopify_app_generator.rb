@@ -12,7 +12,7 @@ module ShopifyApp
         generate("shopify_app:shop_model")
         generate("shopify_app:authenticated_controller")
         generate("shopify_app:root_controller")
-        generate("shopify_app:home_controller")
+        generate("shopify_app:products_controller")
       end
     end
   end

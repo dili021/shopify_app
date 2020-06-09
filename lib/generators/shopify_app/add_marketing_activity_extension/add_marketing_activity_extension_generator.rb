@@ -17,7 +17,7 @@ module ShopifyApp
         inject_into_file(
           'config/routes.rb',
           optimize_indentation(routes, 2),
-          after: "root :to => 'home#index'\n"
+          after: "root :to => 'root#index'\n"
         )
       end
 

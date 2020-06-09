@@ -3,15 +3,15 @@ require 'rails/generators/base'
 
 module ShopifyApp
   module Generators
-    class HomeControllerGenerator < Rails::Generators::Base
+    class ProductsControllerGenerator < Rails::Generators::Base
       source_root File.expand_path('../templates', __FILE__)
 
-      def create_home_controller
-        template('home_controller.rb', 'app/controllers/home_controller.rb')
+      def create_products_controller
+        template('products_controller.rb', 'app/controllers/products_controller.rb')
       end
 
-      def create_home_index_view
-        copy_file('index.html.erb', 'app/views/home/index.html.erb')
+      def add_products_route
+        route("get '/products', :to => 'products#index'")
       end
 
       def embedded_app?

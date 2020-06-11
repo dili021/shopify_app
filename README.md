@@ -74,7 +74,7 @@ Generators
 
 ### Default Generator
 
-The default generator will run the `install`, `shop`, and `home_controller` generators. This is the recommended way to start a new app from scratch:
+The default generator will run the `install`, `shop`, `authenticated_controller`, `root_controller`, and `products_controller` generators. This is the recommended way to start a new app from scratch:
 
 ```sh
 $ rails generate shopify_app
@@ -115,14 +115,29 @@ The generator adds ShopifyApp and the required initializers to the host Rails ap
 After running the `install` generator, you can start your app with `bundle exec rails server` and install your app by visiting localhost.
 
 
-### Home Controller Generator
+### Root Controller Generator
 
 ```sh
-$ rails generate shopify_app:home_controller
+$ rails generate shopify_app:root_controller
 ```
 
-This generator creates an example home controller and view which fetches and displays products using the Shopify API.
+This generator creates an unauthenticated root controller your app can default to.
 
+### Authenticated Controller Generator
+
+```sh
+$ rails generate shopify_app:authenticated_controller
+```
+
+This generator creates an example authenticated controller to protect resources with.
+
+### Products Controller Generator
+
+```sh
+$ rails generate shopify_app:root_controller
+```
+
+This generator creates an example products API controller to fetch products using the Shopify API.
 
 ### App Proxy Controller Generator
 
